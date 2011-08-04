@@ -9,9 +9,7 @@ class Demo.Views.Projects.NewView extends Backbone.View
   initialize: (options) ->
     @model = new @collection.model()
 
-    @model.bind("change:errors", () =>
-      @render()
-    )
+    @model.bind "change:errors", () => @render()
 
   save: (e) ->
     e.preventDefault()
