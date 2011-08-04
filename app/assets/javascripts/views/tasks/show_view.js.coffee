@@ -6,6 +6,7 @@ class Demo.Views.Tasks.ShowView extends Backbone.View
   events:
     "click .edit" : "edit"
     "click .destroy" : "destroy"
+    "click .toggle-done" : "toggleDone"
 
   render: ->
     $(@el).html @template(@model.toJSON())
@@ -25,3 +26,6 @@ class Demo.Views.Tasks.ShowView extends Backbone.View
     @remove()
 
     return false
+
+  toggleDone: ->
+    @model.save({is_done: !@model.get('is_done')})

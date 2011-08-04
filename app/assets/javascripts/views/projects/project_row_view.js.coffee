@@ -9,11 +9,11 @@ class Demo.Views.Projects.ProjectRowView extends Backbone.View
   tagName: "tr"
 
   destroy: () ->
-    @options.model.destroy()
+    @model.destroy()
     @remove()
 
     return false
 
   render: ->
-    $(@el).html @template(@options.model.toJSON() )
+    $(@el).html @template(@model.toJSON())
     return this

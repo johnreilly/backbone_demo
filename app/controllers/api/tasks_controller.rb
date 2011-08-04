@@ -25,7 +25,7 @@ class Api::TasksController < ApplicationController
 
   def update
     @task = Task.find(params[:id])
-    @task.update_attributes pick(params[:task], :name)
+    @task.update_attributes pick(params[:task], :name, :is_done)
     respond_with @task
   end
 

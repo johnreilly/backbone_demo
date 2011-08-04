@@ -1,5 +1,6 @@
 <div class="show-task">
-  <%= @name %> (Done: <%= @is_done %>)
+  <input type="checkbox" class="toggle-done" data-task-id="<%= @id %>" <% if @is_done: %> checked <% end %>>
+  <%= @name %>
   <button class="edit">Edit</button>
   <button class="destroy">Delete</button>
 </div>
