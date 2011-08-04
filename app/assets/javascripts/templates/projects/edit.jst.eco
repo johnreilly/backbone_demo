@@ -10,7 +10,7 @@
 
   <div class="task-fields">
     <b>Tasks:</b>
-    <ul class="task-list"></ul>
+    <ol class="task-list"></ol>
     <button class="new-task">New Task</button>
   </div>
 

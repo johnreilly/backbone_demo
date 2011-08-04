@@ -8,6 +8,8 @@ class Demo.Views.Tasks.ShowView extends Backbone.View
     "click .destroy" : "destroy"
     "click .toggle-done" : "toggleDone"
 
+  tagName: 'li'
+
   render: ->
     $(@el).html @template(@model.toJSON())
     return this
@@ -17,7 +19,7 @@ class Demo.Views.Tasks.ShowView extends Backbone.View
     e.stopPropagation()
 
     view = new Demo.Views.Tasks.EditView model: @model
-    $(@el).html(view.render().el)
+    $(@el).replaceWith view.render().el
 
     return false
 

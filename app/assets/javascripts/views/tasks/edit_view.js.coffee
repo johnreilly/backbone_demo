@@ -7,6 +7,8 @@ class Demo.Views.Tasks.EditView extends Backbone.View
     "click .cancel" : "cancel"
     "click .save" : "save"
 
+  tagName: 'li'
+  
   render: ->
     $(@el).html @template(@model.toJSON())
     return this
@@ -16,7 +18,7 @@ class Demo.Views.Tasks.EditView extends Backbone.View
     e.stopPropagation()
 
     view = new Demo.Views.Tasks.ShowView model: @model
-    $(@el).html(view.render().el)
+    $(@el).replaceWith view.render().el
 
     return false
 
@@ -31,7 +33,7 @@ class Demo.Views.Tasks.EditView extends Backbone.View
       success:(model) =>
         @model = model
         view = new Demo.Views.Tasks.ShowView model: @model
-        $(@el).html(view.render().el)
+        $(@el).replaceWith view.render().el
     )
 
 
