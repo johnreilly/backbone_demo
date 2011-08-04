@@ -12,7 +12,10 @@ class Api::TasksController < ApplicationController
   end
 
   def create
+    project = Project.find_by_id(params[:task][:project_id])
     @task = Task.new pick(params[:task], :name, :is_done)
+    @task.project = project
+
     if @task.save
       respond_with @task, :location => [:api, @task], :status => :created
     else

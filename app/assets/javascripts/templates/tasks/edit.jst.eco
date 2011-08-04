@@ -1,0 +1,7 @@
+<div class="edit-task-form">
+  <label for="name">Task Name:</label>
+  <input type="text" name="name" id="name" value="<%= @name %>" />
+
+  <button class="save">Save</button>
+  <button class="cancel">Cancel</button>
+</div>

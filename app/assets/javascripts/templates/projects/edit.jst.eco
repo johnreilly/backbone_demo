@@ -1,0 +1,23 @@
+<h1>Edit Project</h1>
+
+<form id="edit-project" name="project">
+  <div class="project-fields">
+    <div class="field">
+      <label for="name">Project Name:</label>
+      <input type="text" name="name" id="name" value="<%= @name %>" />
+    </div>
+  </div>
+
+  <div class="task-fields">
+    <b>Tasks:</b>
+    <ul class="task-list"></ul>
+    <button class="new-task">New Task</button>
+  </div>
+
+  <div class="actions">
+    <input type="submit" value="Update Project" />
+  </div>
+
+</form>
+
+<a href="#/index">Back</a>

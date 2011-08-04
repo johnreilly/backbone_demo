@@ -13,14 +13,14 @@ class Demo.Routers.ProjectsRouter extends Backbone.Router
   index: ->
     @view = new Demo.Views.Projects.IndexView(collection: @projects)
     $("#content").html(@view.render().el)
-  #
+
   # new: ->
   #   @view = new Carousel.Views.Templates.NewView(collection: @templates)
   #   $("#templates").html(@view.render().el)
-  #
-  # edit: (id) ->
-  #   tmpl = @templates.get(id)
-  #
-  #   @view = new Carousel.Views.Templates.EditView(model: tmpl)
-  #   $("#templates").html(@view.render().el)
+
+  edit: (id) ->
+    project = @projects.get(id)
+
+    @view = new Demo.Views.Projects.EditView(model: project)
+    $("#content").html(@view.render().el)
 
