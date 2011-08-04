@@ -20,6 +20,7 @@ gem 'jquery-rails'
 gem 'awesome_print'
 
 gem "factory_girl_rails", "~> 1.1.rc1"
+gem 'rabl'
 
 # Use unicorn as the web server
 # gem 'unicorn'
