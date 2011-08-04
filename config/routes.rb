@@ -6,4 +6,6 @@ BackboneDemo::Application.routes.draw do
       resources :tasks
     end
   end
+
+  root :to => 'web_ui#show'
 end

@@ -44,6 +44,11 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.1.1)
+    eco (1.0.0)
+      coffee-script
+      eco-source
+      execjs
+    eco-source (1.1.0.rc.1)
     erubis (2.7.0)
     execjs (1.2.4)
       multi_json (~> 1.0)
@@ -120,6 +125,7 @@ PLATFORMS
 DEPENDENCIES
   awesome_print
   coffee-rails (~> 3.1.0.rc)
+  eco
   factory_girl_rails (~> 1.1.rc1)
   jquery-rails
   rabl

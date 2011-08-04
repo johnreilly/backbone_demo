@@ -1,0 +1,4 @@
+<td><%= @name %></td>
+
+<td><a href="#/<%= @id %>/edit">Edit</td>
+<td><a href="#/<%= @id %>/destroy" class="destroy">Destroy</a></td>

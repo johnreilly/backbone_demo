@@ -1,0 +1,13 @@
+<h1>Listing Projects</h1>
+
+<table id="projects-table">
+  <tr>
+    <th>Project Name</th>
+    <th></th>
+    <th></th>
+  </tr>
+</table>
+
+<br/>
+
+<a href="#/new">New Project</a>
