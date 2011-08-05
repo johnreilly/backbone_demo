@@ -2,8 +2,7 @@
 
 <script type="text/javascript">
   $(function() {
-    var projects = <%= raw render(:file => 'api/projects/index.json.rabl') %>;
-    window.router = new Demo.Routers.ProjectsRouter(projects);
-    Backbone.history.start();
+    window.router = new Demo.Routers.AppRouter();
+    Backbone.history.start({pushState:true});
   });
 </script>

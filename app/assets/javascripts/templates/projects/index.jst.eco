@@ -10,4 +10,4 @@
 
 <br/>
 
-<a href="#/new">New Project</a>
+<a href="/projects/new" class="new-project">New Project</a>

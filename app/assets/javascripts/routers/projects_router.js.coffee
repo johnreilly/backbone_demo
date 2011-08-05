@@ -1,14 +1,12 @@
 class Demo.Routers.ProjectsRouter extends Backbone.Router
-  initialize: (options) ->
+  initialize: (app) ->
+    _.bindAll(this, 'index', 'new', 'edit')
     @projects = new Demo.Collections.ProjectsCollection()
-    @projects.reset options.projects
 
-  routes:
-    "/new":       "new"
-    "/index":     "index"
-    "/:id/edit":  "edit"
-    "":           "index"
-
+    app.route '/projects', 'index', @index
+    app.route '/projects/index', 'index', @index
+    app.route '/projects/:id/edit', 'edit', @edit
+    app.route '/projects/new', 'new', @new
 
   index: ->
     @view = new Demo.Views.Projects.IndexView(collection: @projects)
@@ -23,4 +21,3 @@ class Demo.Routers.ProjectsRouter extends Backbone.Router
 
     @view = new Demo.Views.Projects.EditView(model: project)
     $("#content").html(@view.render().el)
-
